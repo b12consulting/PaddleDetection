@@ -664,7 +664,7 @@ class PipePredictor(object):
 
         if len(self.pushurl) > 0:
             video_out_name = 'output' if self.file_name is None else self.file_name
-            pushurl = os.path.join(self.pushurl, video_out_name)
+            pushurl = self.pushurl
             print("the result will push stream to url:{}".format(pushurl))
             pushstream = PushStream(pushurl)
             pushstream.initcmd(fps, width, height)
